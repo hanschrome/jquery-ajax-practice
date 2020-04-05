@@ -18,11 +18,17 @@ const loadData = () => {
 
 
 const initialize = () => {
-    loadData();
-    console.log('init')
+    $('#button').click(function(){
+        loadData();
+    });
+
+    console.log('init');
 };
 
-initialize();
+$( document ).ready(function() {
+    initialize();
+});
+
 
 
 
