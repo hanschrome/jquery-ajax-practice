@@ -5,9 +5,17 @@ const loadData = () => {
     $.get('api/user.json', function (data) {
         $('#user-name').html(data.name);
         $('#user-last-name').html(data.lastName);
-        $('#user-phones').html('<li>'+data.phones[0]+'</li><li>'+data.phones[1]+'</li>');
+        $.each(data.phones, function(index, value){
+            $('#user-phones').append('<li>'+value+'</li>');
+        });
+        $.each(data.homes, function (index, value){
+            $('#user-homes').append('<li>'+value.name+': '+value.address+'</li>');
+        });
+        $('#user-age').html(data.personalData.age);
+        $('#user-gender').html(data.personalData.gender);
     });
 };
+
 
 const initialize = () => {
     loadData();
