@@ -1,0 +1,22 @@
+{
+  "name": "Nina",
+  "lastName": "Ruiz",
+  "phones": [
+    "666666666",
+    "888888888"
+  ],
+  "homes": [
+    {
+      "name": "Main home",
+      "address": "Logroño"
+    },
+    {
+      "name": "Second home",
+      "address": "Barcelona"
+    }
+  ],
+  "personalData": {
+    "age": 20,
+    "gender": "F"
+  }
+}
